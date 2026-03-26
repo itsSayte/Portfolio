@@ -8,32 +8,46 @@
 </head>
 <body>
 
-    <header class="nav-back">
-        <a href="/index.html" class="back-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<header class="nav-back">
+    <a href="/index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span>Retour</span>
+    </a>
+</header>
+
+<main class="content-wrapper">
+
+    <div class="text-header">
+        <h1>Radio Jazz</h1>
+        <p>Diffusion en direct</p>
+    </div>
+
+    <div class="player">
+
+        <!-- Bouton Play / Pause -->
+        <button id="playBtn" class="btn">
+            <svg viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z"></path>
             </svg>
-            <span>Retour</span>
-        </a>
-    </header>
+        </button>
 
-    <main class="content-wrapper">
-        <div class="text-header">
-            <h1>Radio Jazz</h1>
-            <p>Diffusion en direct</p>
-        </div>
-
-        <div class="player">
-            <button id="playBtn" class="btn">
-                <svg id="playIcon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-
+        <!-- Volume -->
+        <div class="volume-container">
             <input id="volume" type="range" min="0" max="1" step="0.01" value="1">
+            <span id="volume-value">100%</span>
         </div>
-    </main>
 
-    <audio id="radio" src="https://stream.srg-ssr.ch/m/rsj/mp3_128"></audio>
+    </div>
 
-    <script src="/src/js/radio.js"></script>
+</main>
+
+<!-- Audio -->
+<audio id="radio" src="https://stream.srg-ssr.ch/m/rsj/mp3_128"></audio>
+
+<!-- JS à la fin = IMPORTANT -->
+<script src="/src/js/radio.js"></script>
+
 </body>
 </html>

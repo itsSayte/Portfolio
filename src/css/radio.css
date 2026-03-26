@@ -138,3 +138,41 @@ body {
     }
 }
 
+.volume-control {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+#volume {
+    width: 200px;
+    cursor: pointer;
+    color: white;
+}
+
+#volume-value {
+    color: white;
+}
+
+.btn {
+    background: #7c5cff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: #9a7bff;
+}
+
+.btn svg {
+    width: 28px;
+    height: 28px;
+}
