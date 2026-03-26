@@ -1,0 +1,140 @@
+body {
+            background-image: url('/assets/img/background.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            margin: 0;
+        }
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1e1e1e;
+  padding: 12px 18px;
+  border-radius: 12px;
+  width: fit-content;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  background: #1b8fee;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #ffdd33;
+}
+
+#volume {
+  width: 120px;
+  cursor: pointer;
+}
+
+#playBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playBtn svg {
+  width: 10px;
+  height: 10px;
+}
+
+
+/* ===========================
+   NAVBAR BOUTON RETOUR (BLANC)
+=========================== */
+
+.nav-back {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--bg-alt);
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff; /* BLANC */
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.back-btn svg {
+    color: #ffffff; /* FLÈCHE BLANCHE */
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #ec6476;
+}
+
+.back-btn:hover svg {
+    transform: translateX(-4px);
+    color: #ec6476;
+}
+
+/* ===========================
+   CENTRAGE DU CONTENU
+=========================== */
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centre verticalement */
+    align-items: center;       /* Centre horizontalement */
+    height: calc(100vh - 100px); /* Ajuste selon la navbar */
+    text-align: center;
+}
+
+.text-header h1 {
+    font-size: 2.4rem;
+    margin: 0;
+    color: white;
+}
+
+.text-header p {
+    margin-top: 6px;
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    opacity: 0.9;
+}
+
+/* Ajustement du player pour rester centré */
+.player {
+    margin-top: 25px;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-back {
+        padding: 15px 20px;
+    }
+
+    .back-btn {
+        font-size: 16px;
+    }
+
+    .back-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .back-btn span {
+        display: none;
+    }
+}
+

@@ -1,5 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+:root {
+    /* Couleurs principales */
+    --bg: #1e1738;
+    --bg-alt: #140c28;
+    --bg-card: #2a1a4a;
+
+    /* Couleurs accent */
+    --accent: #a855f7;
+    --accent-light: #c084fc;
+
+    /* Texte */
+    --text: #ffffff;
+    --text-soft: #cbd5e1;
+    --text-muted: #e2e8f0;
+
+    /* Effets */
+    --hover-bg: rgba(168,85,247,0.1);
+    --hover-bg-strong: rgba(168,85,247,0.2);
+    --shadow-accent: 0 0 20px var(--accent);
+}
+
+/* HERO PROJET */
+.project-hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(360deg, var(--bg), var(--bg-card));
+}
+
+.project-hero h1 {
+    font-size: 42px;
+    color: var(--accent-light);
+}
+
+.project-subtitle {
+    margin-top: 10px;
+    color: var(--text-soft);
+    font-size: 18px;
+}
+
+/* CONTENU PROJET */
+.project-section {
+    text-align: left;
+}
+
+.project-text h2 {
+    color: var(--accent-light);
+    margin: 30px 0 10px;
+}
+
+.project-text p {
+    color: var(--text-soft);
+    margin-bottom: 20px;
+}
+
+.project-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.project-list li {
+    background: var(--hover-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 8px 0;
+    color: var(--text-muted);
+}
+
+/* GALERIE */
+.project-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0 40px;
+}
+
+.project-gallery img {
+    width: 30%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-gallery img {
+        width: 100%;
+    }
+}
+
+
 *{
     margin:0;
     padding:0;
@@ -10,8 +107,8 @@
 }
 
 body{
-    background:#0f0a1f;
-    color:white;
+    background:var(--bg);
+    color:var(--text);
 }
 
 /* HEADER */
@@ -21,13 +118,13 @@ header{
     justify-content:space-between;
     align-items:center;
     padding:20px 60px;
-    background:#140c28;
+    background:var(--bg-alt);
 }
 
 .logo{
     font-size:24px;
     font-weight:bold;
-    color:#a855f7;
+    color:var(--accent);
 }
 
 nav ul{
@@ -38,12 +135,12 @@ nav ul{
 
 nav a{
     text-decoration:none;
-    color:white;
+    color:var(--text);
     transition:0.3s;
 }
 
 nav a:hover{
-    color:#a855f7;
+    color:var(--accent);
 }
 
 /* HERO */
@@ -51,31 +148,31 @@ nav a:hover{
 .hero{
     text-align:center;
     padding:120px 20px;
-    background:linear-gradient(135deg,#0f0a1f,#2a1a4a);
+    background:linear-gradient(360deg,var(--bg),var(--bg-card));
 }
 
 .hero h1{
     font-size:45px;
-    color:#c084fc;
+    color:var(--accent-light);
 }
 
 .hero p{
     margin:20px 0;
-    color:#cbd5e1;
+    color:var(--text-soft);
 }
 
 .btn{
     padding:12px 30px;
     border:none;
-    background:#a855f7;
-    color:white;
+    background:var(--accent);
+    color:var(--text);
     border-radius:8px;
     cursor:pointer;
     transition:0.3s;
 }
 
 .btn:hover{
-    background:#c084fc;
+    background:var(--accent-light);
 }
 
 /* SECTION */
@@ -89,19 +186,17 @@ nav a:hover{
 
 .section h2{
     margin-bottom:40px;
-    color:#a855f7;
+    color:var(--accent);
 }
 
-/* ============================
-   PROJETS – CARTES ALTERNÉES
-   ============================ */
+/* PROJETS */
 
 .project-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    background: #2a1a4a;
+    background: var(--bg-card);
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -110,24 +205,22 @@ nav a:hover{
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 20px #a855f7;
+    box-shadow: var(--shadow-accent);
 }
 
 .project-card.reverse {
     flex-direction: row-reverse;
 }
 
-/* Conteneur image */
 .img-container {
     display: flex;
-    align-items: center;      /* centre verticalement */
-    justify-content: center;  /* centre horizontalement */
+    align-items: center;
+    justify-content: center;
     width: 30%;
 }
 
-/* Image */
 .img-container img {
-    width: 90%;              
+    width: 90%;
     border-radius: 50%;
     object-fit: cover;
     display: block;
@@ -139,30 +232,30 @@ nav a:hover{
 }
 
 .project-content h2 {
-    color: #c084fc;
+    color: var(--accent-light);
     margin-bottom: 10px;
     font-size: 26px;
 }
 
 .project-content p {
-    color: #cbd5e1;
+    color: var(--text-soft);
     margin-bottom: 20px;
     font-size: 16px;
 }
 
 .btn-project {
     padding: 10px 20px;
-    background: #a855f7;
+    background: var(--accent);
     border: none;
     border-radius: 8px;
-    color: white;
+    color: var(--text);
     cursor: pointer;
     transition: 0.3s ease;
     font-size: 15px;
 }
 
 .btn-project:hover {
-    background: #c084fc;
+    background: var(--accent-light);
 }
 
 /* Responsive */
@@ -186,9 +279,7 @@ nav a:hover{
     }
 }
 
-/* ============================
-   COMPETENCES ACCORDEON
-   ============================ */
+/* ACCORDEON COMPETENCES */
 
 .skills{
     max-width:700px;
@@ -199,7 +290,7 @@ nav a:hover{
 }
 
 .skill{
-    background:#2a1a4a;
+    background:var(--bg-card);
     border-radius:10px;
     overflow:hidden;
 }
@@ -212,24 +303,21 @@ nav a:hover{
     padding:18px;
     background:none;
     border:none;
-    color:#c084fc;
+    color:var(--accent-light);
     font-size:18px;
     cursor:pointer;
 }
 
-/* Flèche principale */
 .arrow-icon {
     width: 18px;
     height: 18px;
     transition: transform 0.3s ease;
 }
 
-/* Rotation flèche principale */
 .skill-title.active svg {
     transform: rotate(90deg);
 }
 
-/* Flèche sous-catégorie */
 .sub-arrow-icon {
     width: 16px;
     height: 16px;
@@ -237,7 +325,6 @@ nav a:hover{
     transition: transform 0.3s ease;
 }
 
-/* Rotation flèche sous-catégorie */
 .click-item.active .sub-arrow-icon {
     transform: rotate(90deg);
 }
@@ -255,14 +342,12 @@ nav a:hover{
 
 .skill-content ul{
     padding:10px 0 20px 20px;
-    color:#cbd5e1;
+    color:var(--text-soft);
 }
 
 .skill.active .skill-content{
     max-height:800px;
 }
-
-/* LISTE COMPETENCES */
 
 .skill-content ul{
     list-style:none;
@@ -272,17 +357,16 @@ nav a:hover{
 .skill-content li{
     padding:8px 10px;
     margin:6px 0;
-    background:rgba(168,85,247,0.1);
-    border-left:4px solid #a855f7;
+    background:var(--hover-bg);
+    border-left:4px solid var(--accent);
     border-radius:4px;
-    color:#e2e8f0;
+    color:var(--text-muted);
     font-size:15px;
     transition:0.2s;
 }
 
-/* effet hover */
 .skill-content li:hover{
-    background:rgba(168,85,247,0.2);
+    background:var(--hover-bg-strong);
     margin-left:5px; 
 }
 
@@ -299,11 +383,9 @@ html{
     color:var(--accent);
 }
 
-/* Items cliquables */
-
 .click-item{
     cursor:pointer;
-    background:rgba(168,85,247,0.1);
+    background:var(--hover-bg);
     border-left:4px solid var(--accent);
     border-radius:6px;
     transition:0.3s;
@@ -311,11 +393,9 @@ html{
 }
 
 .click-item:hover{
-    background:rgba(168,85,247,0.2);
+    background:var(--hover-bg-strong);
     margin-left:5px; 
 }
-
-/* Info box */
 
 .info-box{
     max-height:0;
@@ -325,10 +405,9 @@ html{
     border-radius:6px;
     margin-top:5px;
     padding:0 12px;
-    color:var(--soft);
+    color:var(--text-soft);
 }
 
-/* quand actif */
 .info-box.active{
     max-height:200px;
     padding:12px;
@@ -343,25 +422,97 @@ html{
     transform: scale(1.1);
 }
 
-/* MOBILE */
+/* ===========================
+   MODE MOBILE — NAVBAR DROPDOWN
+=========================== */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .menu-toggle{
-        display:block;
+
+
+    .project-content {
+        text-align: center;
+    }
+    /* Bouton hamburger */
+    .menu-toggle {
+        display: flex;
+        width: 32px;
+        height: 26px;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        z-index: 999;
     }
 
-    nav{
-        display:none;
+    .menu-toggle span {
+        display: block;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 4px;
+        transition: 0.3s ease;
     }
 
-    nav.active{
-        display:block;
+    /* Animation hamburger → croix */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
     }
 
-    nav ul{
-        background:rgba(20,12,40,0.95);
-        padding:20px;
-        border-radius:10px;
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    /* NAV cachée par défaut */
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 200px;
+        background: rgba(20, 12, 40, 0.95);
+        border-radius: 10px;
+        padding: 15px 0;
+        box-shadow: var(--bg-card);
+        animation: fadeIn 0.25s ease;
+        z-index: 998;
+    }
+
+    /* NAV visible */
+    nav.active {
+        display: block;
+    }
+
+    /* Liste verticale */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+        color: var(--text);
+        transition: 0.2s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--accent-light);
+        transform: translateX(5px);
     }
 }
+
+/* Animation d’apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+

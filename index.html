@@ -1,28 +1,15 @@
-<<<<<<< Updated upstream
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-=======
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" href="/assets/icons/icon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
-<title>Portfolio Réseau</title>
+<title>Portfolio</title>
 
 <link rel="stylesheet" href="src/css/styles.css">
 </head>
@@ -31,8 +18,14 @@
 
 <!-- ================= HEADER ================= -->
 
-<header>
+<header>  
     <div class="logo">Portfolio</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <nav id="nav">
         <ul>
@@ -40,12 +33,12 @@
             <li><a href="#apropos">À propos</a></li>
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#projets">Projets</a></li>
+            <li><a href="src/pages/radio.html">Radio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
-    <div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
+
 
 <!-- ================= HERO ================= -->
 
@@ -219,29 +212,33 @@
             <img src="/assets/img/github.jpg" alt="Github">
         </div>
         <div class="project-content">
-            <h2>Projet Développement</h2>
+            <h2>Projets Dévelopement</h2>
             <p>Retrouver tout mes projets de dévelopement sur mon Github</p>
-            <button class="btn-project" onclick="window.location.href='https://github.com/itsSayte';">Voir le projet</button>
+            <button class="btn-project" onclick="window.location.href='https://github.com/itsSayte';">Voir les projets</button>
         </div>
     </div>
 
-    <!-- Projet 2 (inversé) -->
-    <div class="project-card reverse">
+    <!-- Projet 2 -->
+    <div class="project-card">
         <div class="project-content">
-            <h2>Routeur Linux</h2>
-            <p>NAT et firewall</p>
-            <button class="btn-project">Voir le projet</button>
+            <h2>Machine virtuelles à distance</h2>
+            <p>Prise à distance de machine via proxmox</p>
+            <button class="btn-project" onclick="window.location.href='src/pages/proxmox.html'">Voir le projet</button>
         </div>
-        <img src="img/projet2.jpg" alt="Routeur Linux">
+        <div class="img-container">
+            <img src="/assets/img/proxmox.png" alt="Github">
+        </div>
     </div>
 
     <!-- Projet 3 -->
     <div class="project-card">
-        <img src="img/projet3.jpg" alt="Infrastructure Azure">
+        <div class="img-container">
+            <img src="/assets/img/pokeball.png" alt="Github">
+        </div>
         <div class="project-content">
-            <h2>Infrastructure Azure</h2>
-            <p>Déploiement VM cloud</p>
-            <button class="btn-project">Voir le projet</button>
+            <h2>PokéDB</h2>
+            <p>Hébergement du infrastructure linux et création de site web type pokédex</p>
+            <button class="btn-project" onclick="window.location.href='src/pages/pokedb.html'">Voir le projet</button>
         </div>
     </div>
 
@@ -268,5 +265,4 @@
 <script src="src/js/script.js"></script>
 
 </body>
->>>>>>> Stashed changes
 </html>
