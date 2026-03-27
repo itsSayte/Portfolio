@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Changa+One:ital@0;1&family=Oswald&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
             background-image: url('/assets/img/background.gif');
             background-size: cover;
@@ -5,6 +7,9 @@ body {
             background-position: center center;
             height: 100vh;
             margin: 0;
+            font-family: "Changa One", sans-serif;
+            font-weight: 100;
+            font-style: italic;
         }
 
 .player {
@@ -92,9 +97,10 @@ body {
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* Centre verticalement */
-    align-items: center;       /* Centre horizontalement */
-    height: calc(100vh - 100px); /* Ajuste selon la navbar */
+    justify-content: top;   
+    padding-top: 5%;
+    align-items: center;       
+    height: calc(100vh - 100px); 
     text-align: center;
 }
 
@@ -155,7 +161,7 @@ body {
 }
 
 .btn {
-    background: #7c5cff;
+    background: #ec6476;
     border: none;
     border-radius: 50%;
     width: 60px;
@@ -167,12 +173,43 @@ body {
     transition: 0.2s;
 }
 
+.btn i {
+    font-size: 12px;
+    color: white;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+}
 .btn:hover {
     transform: scale(1.1);
-    background: #9a7bff;
+    background: #d35b6b;
 }
 
-.btn svg {
-    width: 28px;
-    height: 28px;
+/* Style du logo GitHub */
+.social-link {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 40px auto 0;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    
+}
+
+.social-link i {
+    font-size: 32px;
+    transition: 0.3s ease;
+    color: #ec6476;
+}
+
+/* Effet hover */
+.social-link:hover {
+    transform: scale(1.12);
+}
+
+.social-link:hover i {
+    color: var(--accent);
+    color: #d35b6b;
 }
