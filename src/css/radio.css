@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Changa+One:ital@0;1&family=Oswald&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-            background-image: url('/assets/img/background.gif');
+            background-image: url('../img/background.gif');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
