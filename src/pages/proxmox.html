@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" href="/assets/icons/icon.ico">
+<link rel="icon" href="assets/icons/icon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
-
 <title>Projet – Proxmox</title>
 
-<link rel="stylesheet" href="/src/css/styles.css">
+<!-- IMPORTANT : chemin relatif -->
+<link rel="stylesheet" href="src/css/styles.css">
 </head>
 
 <body>
@@ -30,11 +30,12 @@
 
     <nav id="nav">
         <ul>
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/index.html#apropos">À propos</a></li>
-            <li><a href="/index.html#competences">Compétences</a></li>
-            <li><a href="/index.html#projets">Projets</a></li>
-            <li><a href="/radio.html">Radio</a></li>
+            <!-- IMPORTANT : chemins relatifs -->
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#apropos">À propos</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="radio.html">Radio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -75,9 +76,10 @@
 
         <h2>Captures d’écran</h2>
         <div class="project-gallery">
-            <img src="/assets/img/projects/proxmox-project-1.png" alt="Capture 1">
-            <img src="/assets/img/projects/proxmox-project-2.png" alt="Capture 2">
-            <img src="/assets/img/projects/proxmox-project-3.png" alt="Capture 3">
+            <!-- IMPORTANT : chemins relatifs -->
+            <img src="assets/img/projects/proxmox-project-1.png" alt="Capture 1">
+            <img src="assets/img/projects/proxmox-project-2.png" alt="Capture 2">
+            <img src="assets/img/projects/proxmox-project-3.png" alt="Capture 3">
         </div>
 
     </div>
@@ -98,8 +100,4 @@
 <!-- ================= FOOTER ================= -->
 
 <footer>
-    <p>© 2026 - Mon Portfolio</p>
-</footer>
-<script src="/src/js/script.js"></script>
-</body>
-</html>
+    <p>© 2026 - Mon Portfolio
